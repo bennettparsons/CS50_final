@@ -1,0 +1,57 @@
+The design of this website, while consisting of a overwhelming number of files, is quite
+simple in principle.  Each of the pages that loads is accompanied by a controller and
+a corresponding view.  The controller passes data to the view that is loaded to the page,
+as well as frequently making backend database changes depending on the user's actions.
+
+Each for is rendered via CS50's render function.  This loads a pre-made header and footer
+along with the specific view that's being rendered.  The header file inculdes the navbar
+(only when a user is logged in) and the accompanying js and css files.  The global javascript
+only serves a few purposes, chiefly providing the typeahead functionality in buy and the table
+sorting functionality in transfer history and rankings.  (Both these features required including associated plugin
+files, typeahead.jquery.min.js and underscore-min.js, and jquery.tablesorter.js, respectively.)
+
+Perhaps the most elaborate part of our endeavor is the vast assortment of tables in the 
+backend database (we used PHPmyadmin for this).  In addition to massive amounts of soccer player data, housed in data and data1
+(and imported from the bin folder), this website required a complex relational database.  We had
+to be very careful when naming fields and deciding on keys, and primary keys, according to how
+we would have to join these tables in SQL calls (using CS50's query function).
+
+A good example of this is the Matches tab.  The mechanism for playing games uses two tables, the matches table and the results
+table.  Whenever a user challenges another to a match, a row is created in the matches table that represents the potential match,
+(there is a boolean value, initially set to 0, that represents the status of the game).  When another user accepts the challenge,
+this status is changed to 1, and a winner is calculated by comparing square overalls.  A series of SQL commands achieve this, as
+well as inserting a new row into the results table, a table which as it sounds, serves as a documentation of a users past
+history, preserving the match ids which can later be linked to the match itself in the matches table, as well as recording the
+result, win/loss margin, and the timestamp at which the game was played.  This table is then rendered via results.php to show the
+user this very info, so that they may revel in their victories or learn from past mistakes!
+
+The homescreen of our our site is controlled by the index.php file, which calls the render function for its respective
+"form" (its view), called "index_form.php", which in turn displays the homescreen using a combination of html, 
+css for styling and values passed into it from its controller, index.php. This structure is very consistent throughout
+our design. In general, the SQL queries are occur in the controller so that the data it returns can be 
+passed into the "form" or view via the render function--thus displaying all of the desired information to the user 
+in the form of html styled with css.
+
+For example, the "squad" tab is meant to display the user's entire team, sorted by position. Therefore in the controller
+"squad.php" we make 5 SQL queries. The first four required us to make a LEFT OUTER JOIN query via a common key in order
+to gain information about the players on the users team (sorted by position), because this information was in two different data tables. The next
+query queries the database for the user's "squad size", which is a counter that is incremented with every purchased
+player and decremented with every sold player. This information could then be passed into the corresponding view
+called "squad_form.php", in which the squad size determines whether the message at the top of the page should encourage
+the user to buy more players if they have less than 11 (standard number of players on the field). Likewise, the
+squad_form.php view is able to render all of the players by position, using "foreach" loops that print a card for each 
+group of players sorted by position.
+
+Using the backend database structure with SQL queries allowed us to add features that simulate certain phenomena when
+the user takes certain actions. For example, each player starts with an overall rating of 70, but we created a form called
+training_form.php, from which the user can choose a player and submit a form that triggers the controller (training.php) to make an SQL
+query that updates the users table to lower the cash amount by $1,000 and also raises the selected player's overall score
+by 3 points (which in turn raises the team's overall score and chances of winning matches). Thus, through forms and their
+corresponding controllers containing SQL statements we simulate the training of a player and its associated costs.
+
+Although design borrows some principles from pset7 (CS50 Finance), we have attempted to apply those principles to
+slightly more complex website structure. For example, our SQL queries were often one of the most troubling and complicated
+aspects to keep track of because of the multiple tables that we ended up with. Indeed, in completing this project we
+found a database of soccerplayers and a list of id's (from soccerwiki.org) and could then (in squad_form.php) code in the
+variable source urls for the player images. We think that this project is an elegant application of concepts we've
+learned this semester.

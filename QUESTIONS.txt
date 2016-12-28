@@ -1,0 +1,2 @@
+1. How to use query function to talk to a specific database in phpmyadmin (it's defaulting to pset7).
+2. Scraping websites for lookup.

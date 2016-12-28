@@ -1,0 +1,29 @@
+We have created a website (with root https://ide50-bennettparsons.cs50.io/) that enables users
+to buy and sell soccer players to create a team to play against other users.  Users start with a
+fixed amount of cash that varies as players are purchased and trained.  Users may, however, earn
+cash bonuses from winning matches.
+
+First a user must login at the register screen by entering a username and password (and confirming
+the password).  Once at the webisites home page, they have much to do before being able to play any
+games!  They must first update their team name on the screen that greets them (they may change this later
+via the settings tab, as well as their username or password).  They must then begin to buy players with
+their starting cash.  This can be done via transfers > buy in the navbar.  Entering a valid first name
+in the firstname box will bring about a typeahead suggestion bar; DON'T CLICK ON THE SUGGESTIONS! They are
+just suggestions for the valid entries into the first and lastname fields.  After you have entered values
+into these fields, assign your player a position.  You may choose to sell any exisiting players via the sell
+tab (in transfers) at any time, as may you view your transaction history at any time (transfers > history).
+Perhaps the most fun feature is viewing the squad you have created, via the squad button.  This shows you some
+of the players' individual stats as well as a fine portrait!
+
+Once you have purchased 11 players, you have a valid lineup! You may now begin to play matches against other
+users by challenging them via the match button on the navbar.  If you don't know the usernames of any other
+users, not to worry!  You can view the leaderboards of all users on the site via the World Rankings button,
+which will give you valid values for other usernames.
+
+You may notice that all your players appear to have the same overall, despite how good you may think they
+are.  That's because they do!  In order to improve your players, you must train them, by sepending $1000
+to improve them by 1 overall.  While this may not seem to be the best deal, it's better than you think; it
+also increases their resell value by $1010, more money than you actually put into them! Not only will training
+help you win games (which brings about a hefty $2000 bonus) it increases the sell price of your players by more
+than you put into them!
+

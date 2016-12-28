@@ -1,0 +1,5 @@
+"matches" -- you can challange another team in your league. at end of week your team's scores are compared. 
+    the winner gets money, the loser gets XP?
+XP -- represents team bonding, makes it more likely that a lower scored team will win a challenge
+formations -- you can see the formations/lineups of your friends in your league
+trading -- trade pals between pals

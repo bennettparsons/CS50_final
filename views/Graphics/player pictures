@@ -1,0 +1,3 @@
+url for all player pictures:
+src="http://cdn.soccerwiki.org/images/player/<?php echo rawurlencode($picture_id); ?>"
+http://cdn.soccerwiki.org/images/player/{player["id.jpg"]}

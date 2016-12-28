@@ -1,0 +1,53 @@
+#!/usr/bin/env php
+<?php
+
+    // example for ajax call, look at search in scripts.js ; template for making ajax call (for addmarker function)
+
+    // make database support joint full-text queries
+
+    require(__DIR__ . "/../includes/config.php");
+    
+
+    if ($argc != 2)
+    {
+        exit("Must proved a command-line argument!");
+    }
+    
+    if (!file_exists($argv[1]))
+    {
+        exit("File doesn't exist!");
+    }
+    
+    if (!is_readable($argv[1]))
+    {
+        exit("File isn't readable!");
+    }
+    
+    // fopen does not return false
+    $handle = fopen($argv[1], "r");
+    if (empty($handle))
+    {
+        exit("Couldn't open file!");
+    }
+    
+    
+    
+    // loop over file, inset rows into database
+    //while (true)
+    //{
+
+        $row = fgetcsv($handle, 100, " ");
+        
+        if (empty($row))
+        {
+            break;
+        }
+        
+        CS50::query("INSERT INTO data (site_id, firstname, lastname, DOB, image) VALUES (?, ?, ?, ?, ?)",
+        $row[0], $row[1], $row[2], $row[3], $row[4]);
+        
+    //}
+    
+    fclose($handle);
+
+?>

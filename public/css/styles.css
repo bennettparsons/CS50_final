@@ -1,0 +1,280 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#top
+{
+    /* surround with whitespace */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#top .nav
+{
+    /* center navigation pills */
+    display: inline-block;
+}
+
+
+
+.fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+ 
+.home-bg {
+    background-image: url("https://expertbeacon.com/sites/default/files/how_to_ensure_your_soccer_field_is_always_in_the_best_condition.jpg");
+}
+.squad-bg {
+    background-image: url("https://artificialgrassrecyclers.com/wp-content/uploads/2015/11/iStock_000017040341_Medium.jpg");
+}
+
+.lineup-bg
+{
+    background-image: url("http://cooladvantagecorp.com/wp-content/uploads/2015/06/soccer-field-background-hd-nfogt8o61.jpg");
+}
+.transfers-bg
+{
+    /*background-image: url("http://roma10.persiangig.com/image/In%20-%20Out/2013-2014/League/2013-January-Transfer-Window-General-Generic-_2880181.jpg");*/
+    background-image: url("http://4.bp.blogspot.com/-VXOExTUsP2Y/UNIWnAIrQMI/AAAAAAAAKBI/YMZ_xA91Iuw/s1600/FIFA_Soccer_Stadium_2010.jpg");
+}
+
+.history-bg
+{
+    background-image: url("http://static1.squarespace.com/static/5372897ce4b02899e91d7c30/t/561d624be4b0be4652443169/1444766291673/Soccer-Field-copy.jpg?format=1500w");
+}
+
+.training-bg
+{
+    background-image: url("http://static1.squarespace.com/static/54b416a8e4b0d2480d45d780/t/54f08dfce4b07741eb5fbb23/1425051132331/soccer-training-sport-secrets_695283.jpg");
+}
+.matches-bg
+{
+    background-image: url("http://orig01.deviantart.net/ac88/f/2011/049/1/1/soccer_match_by_p3p70-d39t9y1.jpg");
+}
+
+.ranking-bg
+{
+    background-image: url("http://images.fineartamerica.com/images-medium-large/soccer-ball-with-globe-composited-onto-it-mike-kemp-images.jpg");
+}
+
+.results-bg
+{
+    background-image: url("https://edviesworld.files.wordpress.com/2014/06/fifa-world-cup-brazil-ball-wallpaper-photos.jpg");
+}
+.settings-bg
+{
+    background-color: black;
+    background-image: url("http://cache.desktopnexus.com/cropped-wallpapers/600/600800-1440x900-[DesktopNexus.com].jpg?st=ONGCMeFH_iktWwfPcIk9bQ&e=1449401874");
+    background-attachment: fixed;
+    background-position: 200px 0px;
+    background-size: cover;
+    
+}
+
+
+.table-bg
+{
+    background-color: white;
+    opacity: .75;
+}
+
+.error-bg
+{
+    background-image: url("http://insider.ticketmaster.com/wp-content/uploads/2014/08/football-stadium.png");
+}
+
+.message
+
+{
+    font-size: medium;
+    color: white;
+}
+
+.player-card
+{
+    /*background-color: #e0e0eb;*/
+    color: white;
+    font: bold;
+}
+
+.position
+{
+    font-family: Verdana, Geneva, sans-serif;
+	/*font-size: 25px;*/
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	color: white;
+	line-height: 22px;
+	position: relative;
+    color: white;
+    font: bold;
+}
+
+.outline 
+{
+    outline: 1px solid #000033;
+    align-items: center;
+    outline-width: 20px;
+    /*width: flex;*/
+}
+
+.user-name
+{
+    font-family: Verdana, Geneva, sans-serif;
+	font-size: 48px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	color: #003e80;
+	line-height: 36px;
+	position: relative;
+    right: 370px;
+	/*filter: opacity=60;*/
+	opacity:0.75;
+}
+
+.team-stats
+{
+    font-family: Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	color: white;
+	line-height: 22px;
+	position: relative;
+    /*right: 0px;*/
+}
+
+.lineup
+{
+    font-family: Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	color: white;
+	background-color: #003166;
+	/*opacity: .7;*/
+	padding: 10px;
+}
+
+.buy
+{
+    position: relative;
+    right: 475px;
+}
+.logo-placeholder
+{
+    font-family: Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	color: #003e80;
+	line-height: 22px;
+	position: relative;
+	left: 15px;
+	border: black;
+	border-width: 10px;
+	padding: 15px;
+}
+
+.buttonlook 
+{
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+
+.submit
+{
+    padding: 10px;
+}
+
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+    
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+/*#left*/
+/*{*/
+/*    float: left;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*}*/
+
+/*#right*/
+/*{*/
+/*    float: right;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*}*/
+
+ul.bottom
+{
+    margin-top:10px;
+    text-align:center;
+}
+
+ul.bottom li
+{
+    color:#333;
+    display:inline-block;
+    
+}
+
+
+#bottom
+{
+    /*shrink bottom's font size */
+    font-size: smaller;
+
+    /*surround with whitespace */
+    margin: 20px;
+    
+    /*bottom: 4px;*/
+    /*    height: 50px;*/
+    /*    left: 0;*/
+    /*    position: absolute;*/
+    /*    right: 0;*/
+    /*    background:#39c5ac;*/
+}
+
+/*#footer*/
+/*{*/
+/*    bottom: 0;*/
+/*    height: 100px;*/
+/*    left: 0;*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*}*/
